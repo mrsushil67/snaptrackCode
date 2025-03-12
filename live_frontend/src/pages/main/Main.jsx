@@ -205,7 +205,7 @@ function Main() {
       clearVehiclePathInterval(); // Clear previous interval
       intervalIdRef.current = setInterval(() => {
         getVehiclePath(selectedVehicleNo);
-        vehicleCurrentLocation(selectedVehicleNo);
+        // vehicleCurrentLocation(selectedVehicleNo);
       }, 10000);
     }
   };
@@ -222,7 +222,7 @@ function Main() {
     getVehiclePath(selectedVehicleNo);
     intervalIdRef.current = setInterval(() => {
       getVehiclePath(selectedVehicleNo);
-      vehicleCurrentLocation(selectedVehicleNo);
+      // vehicleCurrentLocation(selectedVehicleNo);
     }, 10000);
     return () => clearInterval(intervalIdRef.current);
   }, [selectedVehicleNo]);
@@ -291,6 +291,7 @@ function Main() {
           lastLoc={lastLoc}
           getVehiclePath={getVehiclePath}
           currentPosition={currentPosition}
+          vehicleDetails={vehicleDetails}
         />
       </div>
     </div>

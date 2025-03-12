@@ -37,10 +37,10 @@ const VehicleList = ({
 
             <div className="flex flex-row">
               <div className="pr-2 flex flex-row items-center text-[12px]">
-                <span className="px-1">
-                  <FaRegClock />
+                <span className="pr-1 font-bold text-sm">
+                📅
                 </span>
-                {/* <span>Last Update At : </span> */}
+                
                 <span className="text-green-700 font-bold">
                   {vehicle.lastUpdateAt}
                 </span>
@@ -48,10 +48,10 @@ const VehicleList = ({
             </div>
             <div>
               <div className="flex flex-row items-center text-[12px]">
-                <span className="px-1">
-                  <IoMdSpeedometer />
+                <span className="">
+                
                 </span>
-                <span>Speed:</span>
+                <span className="font-bold text-sm text-gray-700" >🚗 Speed:</span>
                 <span
                   className={`${
                     vehicle.speed === 0
@@ -65,7 +65,7 @@ const VehicleList = ({
             </div>
             <div>
               <span className="font-bold text-sm text-gray-700">
-                Address :{" "}
+              📍 Address :{" "}
               </span>
               <span className="text-xs">
                 {vehicle?.currentAddress
